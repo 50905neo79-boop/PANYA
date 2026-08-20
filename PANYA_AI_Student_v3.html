@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PANYA — Student AI Wisdom</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Inter,"Noto Sans Thai",Arial,sans-serif;color:#30465c;background:linear-gradient(135deg,#eef9ff,#fff7fc 48%,#effbf5);min-height:100vh}
+button{font:inherit}.app{display:flex;min-height:100vh}.sidebar{width:245px;padding:24px 16px;background:rgba(255,255,255,.76);backdrop-filter:blur(20px);border-right:1px solid #dcecf1;position:fixed;inset:0 auto 0 0}.logo{text-align:center;margin:4px 0 25px}.logo .lotus{font-size:38px}.logo b{display:block;font-size:27px;color:#5b8eb4;letter-spacing:2px}.logo small{color:#8aa8a2}.account{background:linear-gradient(135deg,#eefaff,#fff0f8);border:1px solid #dcecf1;border-radius:18px;padding:13px;margin-bottom:18px;display:flex;align-items:center;gap:10px}.avatar{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#c9e9ef,#edd4e7);font-size:19px}.account b{font-size:13px}.account small{display:block;color:#8a9aa6;font-size:10px;margin-top:2px}.nav button{width:100%;border:0;background:transparent;text-align:left;padding:13px 15px;border-radius:15px;margin:4px 0;color:#687c8d;cursor:pointer}.nav button.active,.nav button:hover{background:linear-gradient(90deg,#dff3fb,#f7e9f6);color:#4f83a8;font-weight:700}.main{margin-left:245px;width:calc(100% - 245px);padding:30px;max-width:1450px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}.top h1{margin:0;font-size:28px}.sub{color:#8496a4;font-size:13px;margin-top:5px}.term{border:1px solid #dcecf1;background:#fff9;border-radius:30px;padding:10px 17px;color:#8194a1}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card{background:rgba(255,255,255,.82);border:1px solid #dcecf1;border-radius:23px;padding:20px;box-shadow:0 12px 35px #83a9b81a;backdrop-filter:blur(14px)}.label{font-size:12px;color:#8194a1}.num{font-size:30px;font-weight:800;color:#47769b;margin:6px 0}.up{font-size:12px;color:#68a98b}.section{margin-top:16px}.two{display:grid;grid-template-columns:1fr 1fr;gap:15px}.card h3{margin:0 0 14px;font-size:16px}.chart{height:220px;display:flex;align-items:flex-end;gap:16px;padding:10px}.bar{flex:1;max-width:55px;background:linear-gradient(#8ccde2,#b8b7e7);border-radius:14px 14px 5px 5px;position:relative}.bar span{position:absolute;top:-22px;left:50%;transform:translateX(-50%);font-size:11px;color:#647e90}.months{display:flex;gap:16px;padding:0 10px;color:#91a1aa;font-size:11px}.months span{flex:1;text-align:center}.ring{width:155px;height:155px;border-radius:50%;margin:auto;display:grid;place-items:center;background:conic-gradient(#8ecbe1 0 35%,#8ed0bc 35% 60%,#dcb2d8 60% 80%,#f3c9b0 80% 100%);position:relative}.ring:after{content:"";position:absolute;width:112px;height:112px;background:white;border-radius:50%}.ring div{position:relative;z-index:1;text-align:center}.ring b{display:block;font-size:27px;color:#4c7593}.prediction{text-align:center;padding:10px}.score{font-size:54px;font-weight:800;color:#557eab}.tag{display:inline-block;padding:6px 11px;border-radius:20px;background:#e9f8ef;color:#5c9c7d;font-size:11px}.progress{height:9px;background:#edf1f4;border-radius:10px;overflow:hidden;margin:12px 0}.progress i{display:block;height:100%;background:linear-gradient(90deg,#83cbe0,#d4a9d8);border-radius:10px}.rec{display:flex;gap:12px;padding:13px 0;border-bottom:1px solid #edf2f3}.ico{width:38px;height:38px;border-radius:13px;background:#eaf7f4;display:grid;place-items:center;flex:none}.tip{background:linear-gradient(135deg,#f5fcff,#fff6fb);border:1px solid #e2edf0;border-radius:18px;padding:16px;margin:10px 0}.tip b{color:#547d9c}.tip p{margin:6px 0 0;font-size:12px;color:#758794;line-height:1.7}.profile{display:flex;gap:18px;align-items:center}.bigavatar{width:76px;height:76px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#c9e9ef,#edd4e7);font-size:31px}.btn{border:0;border-radius:14px;background:#78a8c9;color:white;padding:10px 15px;cursor:pointer}.quote{text-align:center;color:#79938f;font-style:italic;margin:20px}.page{display:none}.page.active{display:block}.mobilebar{display:none}
+@media(max-width:900px){.sidebar{width:78px}.logo b,.logo small,.account div:not(.avatar),.nav span{display:none}.nav button{text-align:center}.account{justify-content:center}.main{margin-left:78px;width:calc(100% - 78px);padding:18px}.grid{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}}
+@media(max-width:600px){.top{display:block}.term{display:inline-block;margin-top:10px}.grid{grid-template-columns:1fr}.main{padding-bottom:80px}.mobilebar{display:flex;position:fixed;bottom:10px;left:10px;right:10px;background:#ffffffeF;border:1px solid #dcecf1;border-radius:20px;padding:8px;justify-content:space-around;z-index:5}.mobilebar button{border:0;background:transparent;font-size:18px}.sidebar{display:none}.main{margin-left:0;width:100%}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+<div class="logo"><div class="lotus">🪷</div><b>PANYA</b><small>STUDENT AI WISDOM</small></div>
+<div class="account"><div class="avatar">🧑‍🎓</div><div><b>น้องปัญญา</b><small>บัญชีนักเรียน · ม.5/1</small></div></div>
+<nav class="nav">
+<button class="active" onclick="go('home',this)">🏠 <span>หน้าหลัก</span></button>
+<button onclick="go('analytics',this)">📊 <span>ผลการเรียน</span></button>
+<button onclick="go('trend',this)">📈 <span>แนวโน้มคะแนน</span></button>
+<button onclick="go('prediction',this)">🔮 <span>AI Prediction</span></button>
+<button onclick="go('insight',this)">✨ <span>จุดแข็ง & พัฒนา</span></button>
+<button onclick="go('tips',this)">🌱 <span>ทริคแต่ละวิชา</span></button>
+<button onclick="go('profile',this)">👤 <span>โปรไฟล์ของฉัน</span></button>
+</nav>
+</aside>
+
+<main class="main">
+<section id="home" class="page active">
+<div class="top"><div><h1>สวัสดี น้องปัญญา 🪷</h1><div class="sub">พื้นที่ส่วนตัวสำหรับติดตามและพัฒนาการเรียนของคุณ</div></div><div class="term">ภาคเรียน 1 / 2569</div></div>
+<div class="grid">
+<div class="card"><div class="label">คะแนนเฉลี่ยของฉัน</div><div class="num">82.6%</div><div class="up">↑ 5.4% จากเดือนที่แล้ว</div></div>
+<div class="card"><div class="label">GPA ปัจจุบัน</div><div class="num">3.42</div><div class="up">อยู่ในระดับดี</div></div>
+<div class="card"><div class="label">การเข้าเรียน</div><div class="num">92%</div><div class="up">สม่ำเสมอ</div></div>
+<div class="card"><div class="label">การส่งงาน</div><div class="num">88%</div><div class="up">ควรรักษาความต่อเนื่อง</div></div>
+</div>
+<div class="section two">
+<div class="card"><h3>📚 ภาพรวมผลการเรียนของฉัน</h3><div style="display:flex;align-items:center;gap:25px"><div class="ring"><div><b>82.6%</b><span class="label">ค่าเฉลี่ย</span></div></div><div class="label" style="line-height:2">คณิตศาสตร์　85.4<br>วิทยาศาสตร์　83.1<br>ภาษาอังกฤษ　80.2<br>ภาษาไทย　78.6</div></div></div>
+<div class="card"><h3>📈 แนวโน้มคะแนนของฉัน</h3><div class="chart"><div class="bar" style="height:35%"><span>65</span></div><div class="bar" style="height:48%"><span>72</span></div><div class="bar" style="height:63%"><span>78</span></div><div class="bar" style="height:72%"><span>82</span></div><div class="bar" style="height:83%"><span>87</span></div></div><div class="months"><span>ม.ค.</span><span>ก.พ.</span><span>มี.ค.</span><span>เม.ย.</span><span>พ.ค.</span></div></div>
+</div>
+<div class="section two">
+<div class="card"><h3>🔮 AI Prediction</h3><div class="prediction"><div class="label">คาดการณ์คะแนนครั้งถัดไป</div><div class="score">89</div><span class="tag">แนวโน้มดีมาก</span><div class="progress"><i style="width:89%"></i></div><small class="label">AI วิเคราะห์จากคะแนน การเข้าเรียน และการส่งงานของคุณ</small></div></div>
+<div class="card"><h3>🪷 Insight ของฉัน</h3><div class="rec"><div class="ico">✨</div><div><b>จุดแข็ง</b><div class="label">วิทยาศาสตร์และคณิตศาสตร์มีแนวโน้มดีขึ้น</div></div></div><div class="rec"><div class="ico">🌱</div><div><b>สิ่งที่ควรพัฒนา</b><div class="label">ภาษาไทยควรเพิ่มเวลาทบทวนอีกเล็กน้อย</div></div></div></div>
+</div>
+<div class="quote">“ใช้ข้อมูลรู้จักตน ใช้ปัญญาพัฒนาตน”</div>
+</section>
+
+<section id="analytics" class="page"><div class="top"><div><h1>📊 ผลการเรียนของฉัน</h1><div class="sub">ดูข้อมูลของตัวเองโดยไม่เปรียบเทียบกับนักเรียนคนอื่น</div></div></div>
+<div class="grid"><div class="card"><div class="label">คณิตศาสตร์</div><div class="num">85.4</div><div class="up">↑ ดีขึ้น</div></div><div class="card"><div class="label">วิทยาศาสตร์</div><div class="num">83.1</div><div class="up">↑ ดีขึ้น</div></div><div class="card"><div class="label">ภาษาอังกฤษ</div><div class="num">80.2</div><div class="up">→ คงที่</div></div><div class="card"><div class="label">ภาษาไทย</div><div class="num">78.6</div><div class="up">↑ ดีขึ้นเล็กน้อย</div></div></div>
+<div class="section card"><h3>ข้อมูลการเรียนของฉัน</h3><div class="rec"><div class="ico">🗓️</div><div><b>การเข้าเรียน 92%</b><div class="progress"><i style="width:92%"></i></div></div></div><div class="rec"><div class="ico">📝</div><div><b>การส่งงาน 88%</b><div class="progress"><i style="width:88%"></i></div></div></div><div class="rec"><div class="ico">📚</div><div><b>เวลาทบทวนเฉลี่ย 1.8 ชั่วโมง/วัน</b><div class="progress"><i style="width:72%"></i></div></div></div></div></section>
+
+<section id="trend" class="page"><div class="top"><div><h1>📈 แนวโน้มคะแนนของฉัน</h1><div class="sub">ติดตามพัฒนาการของตัวเองในแต่ละเดือน</div></div></div>
+<div class="card"><h3>คะแนนเฉลี่ยรายเดือน</h3><div class="chart"><div class="bar" style="height:45%"><span>65</span></div><div class="bar" style="height:55%"><span>72</span></div><div class="bar" style="height:67%"><span>78</span></div><div class="bar" style="height:75%"><span>82</span></div><div class="bar" style="height:83%"><span>87</span></div><div class="bar" style="height:90%"><span>91</span></div></div><div class="months"><span>ม.ค.</span><span>ก.พ.</span><span>มี.ค.</span><span>เม.ย.</span><span>พ.ค.</span><span>มิ.ย.</span></div></div>
+<div class="section card"><h3>💡 สิ่งที่ PANYA สังเกต</h3><div class="label">คะแนนของคุณเพิ่มขึ้นต่อเนื่องในช่วง 5 เดือนที่ผ่านมา แสดงถึงพัฒนาการที่ดีจากการเรียนและการทบทวนอย่างสม่ำเสมอ</div></div></section>
+
+<section id="prediction" class="page"><div class="top"><div><h1>🔮 AI Prediction</h1><div class="sub">คาดการณ์แนวโน้มผลการเรียนจากข้อมูลของคุณ</div></div></div>
+<div class="two"><div class="card prediction"><div class="label">คะแนนที่ AI คาดการณ์</div><div class="score">89</div><span class="tag">แนวโน้มดีมาก</span><div class="progress"><i style="width:89%"></i></div><div class="label">ช่วงคะแนนที่เป็นไปได้ 85–93 คะแนน</div></div>
+<div class="card"><h3>AI วิเคราะห์จาก</h3><div class="rec"><div class="ico">📚</div><div><b>คะแนนที่ผ่านมา</b><div class="label">แนวโน้มคะแนนเพิ่มขึ้น</div></div></div><div class="rec"><div class="ico">🗓️</div><div><b>การเข้าเรียน</b><div class="label">92% อยู่ในระดับดี</div></div></div><div class="rec"><div class="ico">📝</div><div><b>การส่งงาน</b><div class="label">88% ควรรักษาความสม่ำเสมอ</div></div></div></div></div>
+<div class="quote">ผลการคาดการณ์เป็นแนวทางช่วยวางแผน ไม่ใช่คำตัดสินความสามารถของคุณ</div></section>
+
+<section id="insight" class="page"><div class="top"><div><h1>✨ จุดแข็ง & จุดที่ควรพัฒนา</h1><div class="sub">คำแนะนำเฉพาะสำหรับการเรียนของคุณ</div></div></div>
+<div class="two"><div class="card"><h3>🌿 จุดแข็งของฉัน</h3><div class="rec"><div class="ico">✓</div><div><b>คณิตศาสตร์</b><div class="label">คะแนน 85.4 และมีแนวโน้มเพิ่มขึ้น</div></div></div><div class="rec"><div class="ico">✓</div><div><b>วิทยาศาสตร์</b><div class="label">คะแนน 83.1 และพัฒนาต่อเนื่อง</div></div></div><div class="rec"><div class="ico">✓</div><div><b>การเข้าเรียน</b><div class="label">มีความสม่ำเสมอ 92%</div></div></div></div>
+<div class="card"><h3>🌸 สิ่งที่ควรพัฒนา</h3><div class="rec"><div class="ico">!</div><div><b>ภาษาไทย</b><div class="label">เพิ่มเวลาทบทวนคำศัพท์และการอ่านจับใจความ</div></div></div><div class="rec"><div class="ico">!</div><div><b>การส่งงาน</b><div class="label">วางแผนงานล่วงหน้าเพื่อเพิ่มความสม่ำเสมอ</div></div></div></div></div></section>
+
+<section id="tips" class="page"><div class="top"><div><h1>🌱 ทริคแต่ละวิชา</h1><div class="sub">เคล็ดลับเล็ก ๆ ที่ปรับใช้กับการเรียนของคุณได้ทันที</div></div></div>
+<div class="two">
+<div class="card"><div class="tip"><b>🔢 คณิตศาสตร์ — เรียนให้เข้าใจ ไม่ใช่จำอย่างเดียว</b><p>อ่านโจทย์ → เขียนสิ่งที่โจทย์ให้ → เลือกสูตร → ทำทีละขั้น และตรวจคำตอบทุกครั้ง</p></div><div class="tip"><b>🧪 วิทยาศาสตร์ — สรุปเป็นภาพ</b><p>ใช้ Mind Map หรือแผนภาพเชื่อมโยงเหตุและผล จะช่วยจำกระบวนการและคำศัพท์ได้ง่ายขึ้น</p></div></div>
+<div class="card"><div class="tip"><b>🇬🇧 ภาษาอังกฤษ — ฝึกทุกวันสั้น ๆ</b><p>ท่องศัพท์วันละ 5–10 คำ แล้วลองแต่งประโยคจากคำศัพท์นั้นแทนการท่องเพียงอย่างเดียว</p></div><div class="tip"><b>📖 ภาษาไทย — อ่านแล้วสรุป</b><p>หลังอ่านแต่ละย่อหน้า ลองสรุปด้วยคำของตัวเอง 1–2 ประโยค เพื่อฝึกจับใจความ</p></div></div>
+</div>
+<div class="section card"><h3>🧘 ทริคจาก PANYA</h3><div class="label">ก่อนเริ่มอ่านหนังสือ ลองหยุดนิ่งและกำหนดลมหายใจสั้น ๆ 1 นาที แล้วตั้งเป้าหมายว่า “วันนี้ฉันจะเข้าใจอะไรเพิ่มขึ้นหนึ่งเรื่อง”</div></div></section>
+
+<section id="profile" class="page"><div class="top"><div><h1>👤 โปรไฟล์ของฉัน</h1><div class="sub">บัญชีนักเรียนส่วนตัว</div></div></div>
+<div class="card"><div class="profile"><div class="bigavatar">🧑‍🎓</div><div><h2 style="margin:0">น้องปัญญา</h2><div class="label">ม.5/1 · เลขที่ 12</div><div class="label">ภาคเรียน 1 / 2569</div></div><button class="btn" onclick="alert('ตัวอย่างเมนูแก้ไขโปรไฟล์')">แก้ไขโปรไฟล์</button></div></div>
+<div class="section grid"><div class="card"><div class="label">GPA</div><div class="num">3.42</div></div><div class="card"><div class="label">คะแนนเฉลี่ย</div><div class="num">82.6</div></div><div class="card"><div class="label">เข้าเรียน</div><div class="num">92%</div></div><div class="card"><div class="label">AI Prediction</div><div class="num">89</div></div></div>
+<div class="section card"><h3>🪷 เป้าหมายการเรียน</h3><div class="label">เป้าหมาย GPA: 3.60</div><div class="progress"><i style="width:86%"></i></div><div class="label">ความคืบหน้า 86% — เหลืออีกเล็กน้อยเพื่อไปถึงเป้าหมาย</div></div></section>
+</main></div>
+
+<div class="mobilebar"><button onclick="go('home')">🏠</button><button onclick="go('analytics')">📊</button><button onclick="go('prediction')">🔮</button><button onclick="go('tips')">🌱</button><button onclick="go('profile')">👤</button></div>
+<script>
+function go(id,btn){
+ document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+ document.getElementById(id).classList.add('active');
+ document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));
+ if(btn)btn.classList.add('active');
+ window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
